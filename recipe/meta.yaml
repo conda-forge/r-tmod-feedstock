@@ -25,16 +25,20 @@ requirements:
     - {{ posix }}zip  # [win]
   host:
     - r-base
-    - r-xml
     - r-beeswarm
     - r-plotwidgets
+    - r-gplots
+    - r-rcolorbrewer
     - r-tagcloud
+    - r-xml
   run:
     - r-base
-    - r-xml
     - r-beeswarm
     - r-plotwidgets
+    - r-gplots
+    - r-rcolorbrewer
     - r-tagcloud
+    - r-xml
 
 test:
   commands:
@@ -43,10 +47,11 @@ test:
 
 about:
   home: http://bioinfo.mpiib-berlin.mpg.de/tmod/
-  license: GPL (>= 2.0)
+  license: GPL-2.0-or-later
   summary: Methods and feature set definitions for feature or gene set enrichment analysis in transcriptional and metabolic profiling data. Package includes tests for enrichment based on ranked lists of features, functions for visualisation and multivariate functional analysis.
   license_family: GPL3
-  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
+  license_file:
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
 
 extra:
   recipe-maintainers:
