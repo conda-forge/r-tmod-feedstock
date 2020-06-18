@@ -1,4 +1,4 @@
-{% set version = '0.40' %}
+{% set version = "0.44" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/tmod_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/tmod/tmod_{{ version }}.tar.gz
-  sha256: f49869963292efe6b1e4ef2a6f68923eb739f9efd4ff02a34aef3437a52cf594
+  sha256: d3174d339fb01285223547197876c855ded4ecf836aed3dafb832b8725a4e0f6
 
 build:
-  merge_build_host: True  # [win]
-  number: 2
+  merge_build_host: true  # [win]
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -25,16 +25,20 @@ requirements:
     - {{ posix }}zip  # [win]
   host:
     - r-base
-    - r-xml
     - r-beeswarm
     - r-plotwidgets
+    - r-gplots
+    - r-rcolorbrewer
     - r-tagcloud
+    - r-xml
   run:
     - r-base
-    - r-xml
     - r-beeswarm
     - r-plotwidgets
+    - r-gplots
+    - r-rcolorbrewer
     - r-tagcloud
+    - r-xml
 
 test:
   commands:
@@ -43,13 +47,11 @@ test:
 
 about:
   home: http://bioinfo.mpiib-berlin.mpg.de/tmod/
-  license: GPL (>= 2.0)
-  summary: Methods and feature set definitions for feature or gene set enrichment analysis in
-    transcriptional and metabolic profiling data. Package includes tests for enrichment
-    based on ranked lists of features, functions for visualisation and multivariate
-    functional analysis.
+  license: GPL-2.0-or-later
+  summary: Methods and feature set definitions for feature or gene set enrichment analysis in transcriptional and metabolic profiling data. Package includes tests for enrichment based on ranked lists of features, functions for visualisation and multivariate functional analysis.
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
+  license_file:
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
 
 extra:
   recipe-maintainers:
