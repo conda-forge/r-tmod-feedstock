@@ -1,4 +1,4 @@
-{% set version = "0.44" %}
+{% set version = "0.46.2" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/tmod_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/tmod/tmod_{{ version }}.tar.gz
-  sha256: d3174d339fb01285223547197876c855ded4ecf836aed3dafb832b8725a4e0f6
+  sha256: a2657f5f0bee01326c32da61e1f05fa0c2b2d44eeee01861c9f0545d77b43f8d
 
 build:
   merge_build_host: true  # [win]
