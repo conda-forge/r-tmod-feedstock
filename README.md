@@ -3,9 +3,9 @@ About r-tmod
 
 Home: http://bioinfo.mpiib-berlin.mpg.de/tmod/
 
-Package license: GPL (>= 2.0)
+Package license: GPL-2.0-or-later
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Methods and feature set definitions for feature or gene set enrichment analysis in transcriptional and metabolic profiling data. Package includes tests for enrichment based on ranked lists of features, functions for visualisation and multivariate functional analysis.
 
