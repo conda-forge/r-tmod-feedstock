@@ -22,23 +22,25 @@ build:
 
 requirements:
   build:
-    - {{ posix }}zip  # [win]
+    - {{ posix }}zip               # [win]
   host:
     - r-base
-    - r-beeswarm
-    - r-plotwidgets
-    - r-gplots
     - r-rcolorbrewer
-    - r-tagcloud
     - r-xml
+    - r-beeswarm
+    - r-colordf
+    - r-gplots
+    - r-plotwidgets
+    - r-tagcloud
   run:
     - r-base
-    - r-beeswarm
-    - r-plotwidgets
-    - r-gplots
     - r-rcolorbrewer
-    - r-tagcloud
     - r-xml
+    - r-beeswarm
+    - r-colordf
+    - r-gplots
+    - r-plotwidgets
+    - r-tagcloud
 
 test:
   commands:
