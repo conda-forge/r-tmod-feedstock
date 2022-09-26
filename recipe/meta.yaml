@@ -23,24 +23,39 @@ build:
 requirements:
   build:
     - {{ posix }}zip               # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
     - r-rcolorbrewer
     - r-xml
     - r-beeswarm
-    - r-colordf
+    - r-ggplot2
+    - r-ggrepel
     - r-gplots
+    - r-pheatmap
     - r-plotwidgets
+    - r-purrr
+    - r-rlang
     - r-tagcloud
+    - r-tibble
+    - r-tidyr
+    - r-tidyselect
   run:
     - r-base
     - r-rcolorbrewer
     - r-xml
     - r-beeswarm
-    - r-colordf
+    - r-ggplot2
+    - r-ggrepel
     - r-gplots
+    - r-pheatmap
     - r-plotwidgets
+    - r-purrr
+    - r-rlang
     - r-tagcloud
+    - r-tibble
+    - r-tidyr
+    - r-tidyselect
 
 test:
   commands:
