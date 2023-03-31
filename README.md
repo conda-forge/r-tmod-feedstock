@@ -1,11 +1,11 @@
-About r-tmod
-============
+About r-tmod-feedstock
+======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-tmod-feedstock/blob/main/LICENSE.txt)
 
 Home: http://bioinfo.mpiib-berlin.mpg.de/tmod/
 
 Package license: GPL-2.0-or-later
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-tmod-feedstock/blob/main/LICENSE.txt)
 
 Summary: Methods and feature set definitions for feature or gene set enrichment analysis in transcriptional and metabolic profiling data. Package includes tests for enrichment based on ranked lists of features, functions for visualisation and multivariate functional analysis.
 
